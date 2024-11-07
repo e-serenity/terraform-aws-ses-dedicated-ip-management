@@ -92,9 +92,14 @@ module "dynamodb_table_bounce" {
 
   # key/attributes
   hash_key  = "UserId"
+  range_key = "messageId"
   attributes = [
     {
       name = "UserId"
+      type = "S",
+    },
+    {
+      name = "messageId"
       type = "S",
     },
     {

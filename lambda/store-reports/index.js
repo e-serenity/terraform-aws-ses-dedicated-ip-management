@@ -112,7 +112,7 @@ function writeDDB(id, payload, tableName, status) {
       Diag: payload?.bounce?.bouncedRecipients[0]?.diagnosticCode || payload?.deliveryDelay?.delayedRecipients[0]?.diagnosticCode,
       reason: payload?.bounce?.reason,
       messageId: payload.mail.messageId,
-      timestamp: payload.mail.timestamp,
+      date: payload.mail.timestamp,
       state: status,
       ttl: Math.floor(Date.now() / 1000) + TTL_DELTA
     }

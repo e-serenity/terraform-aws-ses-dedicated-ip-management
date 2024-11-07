@@ -11,7 +11,7 @@ module "sending_reports_lambda" {
   runtime       = "nodejs20.x"
   source_path     = "./lambda/store-reports"
   memory_size   = 128
-  timeout       = 5
+  timeout       = 60
   architectures = ["arm64"]
 
   cloudwatch_logs_retention_in_days = 7
